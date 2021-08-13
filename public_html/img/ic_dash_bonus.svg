@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:transparent;stroke:#fff;stroke-linecap:round;stroke-width:1.2px}
+        </style>
+    </defs>
+    <g id="prefix__ic_bonusicon" transform="translate(-1556 -546)">
+        <g id="prefix__btn_mypakage" transform="translate(909 252)">
+            <rect id="prefix__사각형_5318" width="18" height="18" fill="#ffc20b" data-name="사각형 5318" rx="9" transform="translate(647 294)"/>
+            <path id="prefix__선_840" d="M0 0L0 8" class="prefix__cls-2" data-name="선 840" transform="translate(656 299)"/>
+            <path id="prefix__선_841" d="M0 0L0 8" class="prefix__cls-2" data-name="선 841" transform="rotate(90 178.5 481.5)"/>
+        </g>
+    </g>
+</svg>

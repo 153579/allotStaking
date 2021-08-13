@@ -1,0 +1,194 @@
+<!-- <?php
+
+$sql = "select * from g5_order mb_id = '{$member['mb_id']}'";
+$ord = sql_fetch($sql);
+
+if(($ord['ord_day_fill'] >= 20) || ($member['mb_id'] == 'whrudrn2882') || ($member['mb_id'] == 'jp9811') ){
+
+}else {
+	echo "<script> 
+        alert('패키지구매후 20일 후부터 출금 가능 합니다.');
+        location.href = 'https://dnbplus.com/';
+        </script>";	
+}
+
+?> -->
+<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+    <div class="kt-portlet">
+        <div class="kt-portlet__head" style="width:100%;">
+            <div class="kt-portlet__head-label" style="width:100%; margin:25px 0">
+                <h3 class="kt-portlet__head-title1" style="margin:0 auto;">
+                    <a href="#" class="wtda_ap_btn1 c1">출금 신청하기 (DNB)</a>
+                    <a href="#" class="wtda_ap_btn2 c2">출금 신청하기 (USDT)</a>
+                </h3>
+            </div>
+        </div>
+
+        <form id="form" class="kt-form kt-form--label-right wdap1" method="POST" action="./cash_update.php"
+            novalidate="novalidate">
+            <input type="hidden" name="w" value="">
+            <input type="hidden" name="bo_table" value="withdraw">
+            <input type="hidden" name="wr_subject" value="1">
+            <input type="hidden" name="wr_content" value="1">
+			<input type="hidden" name="mb_id" value="<?php echo $member['mb_id']; ?>">
+            <div class="kt-portlet__body">
+                <div class="form-group row">
+                    <label class="col-form-label col-lg-4-1 col-sm-12">출금가능</label>
+                    <div class="col-lg-4-1 col-md-12 col-sm-12">
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="" name="now_money" value="<?php echo $member['mb_2']; ?>" readonly="">
+                            <div class="input-group-append"><span class="input-group-text">DNB</span></div>
+                        </div>
+                        <span class="form-text" style="color:#5867dd; font-size:13px; margin-top:10px;"><b
+                                style="vertical-align:-3px; font-size:16px;">* </b>최소 출금 금액 50,000
+                            DNB</span>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label class="col-form-label col-lg-4-1 col-sm-12">출금 수수료</label>
+                    <div class="col-lg-4-1 col-md-12 col-sm-12">
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="" value="5,000" readonly="">
+                            <div class="input-group-append"><span class="input-group-text">DNB</span></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label class="col-form-label col-lg-4-1 col-sm-12">출금신청</label>
+                    <div class="col-lg-4-1 col-md-12 col-sm-12">
+                        <div class="input-group">
+                            <input type="text" class="form-control out_cash" placeholder="" name="out_money" value="">
+                            <div class="input-group-append"><span class="input-group-text">DNB</span></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <div class="form-group row">
+                    <div class="col-lg-2"></div>
+                    <label class="col-form-label col-lg-4-1 col-sm-12">출금 수수료</label>
+                    <div class="col-lg-4-1 col-md-12 col-sm-12">
+
+                        <div class="input-group">
+                            <input type="text" class="form-control trans_money" placeholder="" name="trans_money"  value="" readonly="">
+                            <div class="input-group-append"><span class="input-group-text">USD</span></div>
+                        </div>
+                    </div>
+                </div> -->
+
+
+                <div class="form-group row">
+                    <label class="col-form-label col-lg-4-1 col-sm-12">최종 출금</label>
+                    <div class="col-lg-4-1 col-md-12 col-sm-12">
+
+                        <div class="input-group">
+                            <input type="text" class="form-control real_money" placeholder=""  name="real_money" value=""
+                                readonly="">
+                            <div class="input-group-append"><span class="input-group-text">DNB</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-lg-4-1 col-sm-12">출금 주소</label>
+                    <div class="col-lg-4-1 col-md-12 col-sm-12">
+                        <input type="text" class="form-control" name="addr" value="">
+                    </div>
+                </div>
+                <!-- <div class="form-group row">
+                    <label class="col-form-label col-lg-4-1 col-sm-12">메모(데스티네이션 코드)</label>
+                    <div class="col-lg-4-1 col-md-12 col-sm-12">
+                        <input type="text" class="form-control" name="memo" value="">
+                    </div>
+                </div> -->
+
+				<!--
+                <div class="form-group row">
+                    <label class="col-form-label col-lg-4-1 col-sm-12 col-xs-12">이메일 인증</label>
+                    <div class="col-lg-4-1 col-md-12 col-sm-12">
+                        <div class="input-group">
+                            <div class="input-group-prepend"><span class="input-group-text">@<i
+                                        class="la la-at"></i></span></div>
+                            <input type="mail" class="form-control" value="" placeholder="Email"
+                                aria-describedby="basic-addon1" readonly="readonly"
+                                style="border-top-right-radius:4px; border-bottom-right-radius:4px;">
+                            <button id="email_code_send_btn" type="button" class="btn btn-primary"
+                                style="margin-left:15px; font-size:14px; " data-toggle="modal"
+                                data-target="#recommender-modal">인증번호 발송</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-lg-4-1 col-sm-12">인증코드 입력</label>
+                    <div class="col-lg-4-1 col-md-12 col-sm-12">
+
+                        <div class="input-group">
+                            <input type="text" name="email_code_check" class="form-control" placeholder="" value=""
+                                style="border-top-right-radius:4px; border-bottom-right-radius:4px;">
+                        </div>
+                    </div>
+                </div>
+				-->
+            </div>
+
+
+            <div class="kt-portlet__foot">
+                <div class="kt-form__actions">
+                    <div class="row">
+                        <div class="col-lg-5"></div>
+                        <div class="col-lg-2">
+                            <button type="submit" id="form_submit" class="btn btn-brand">출금신청</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+<script>
+
+	var mb_money = parseInt("<?php echo $member['mb_2']; ?>");
+
+	$('.out_cash').on("change keyup paste", function (){
+
+		var out_money = parseInt($('.out_cash').val());
+		var real_money = 0;
+		var trans = 0;
+
+		console.log(mb_money);
+		console.log(out_money);
+		if(out_money > mb_money ) { 
+			alert("출금가능 금액을 넘을수 없습니다."); 
+			$('.out_cash').val("0");
+			$('.out_cash').focus();
+		}else {
+			trans = out_money * 0.05;
+			real_money = out_money - trans;
+			$('.trans_money').val(trans);
+			$('.real_money').val(real_money);
+		}
+	});
+</script>
+
+<script>
+    $(".c1").click(function(){
+        $(".c1").css("background-color","#345be0")
+        $(".c2").css("background-color","#fff")
+        $(".wtda_ap_btn1").css("color","#fff")
+        $(".wtda_ap_btn2").css("color","#345be0")
+    })
+    $(".c2").click(function(){
+        $(".c2").css("background-color","#345be0")
+        $(".c1").css("background-color","#fff")
+        $(".wtda_ap_btn2").css("color","#fff")
+        $(".wtda_ap_btn1").css("color","#345be0")
+    })
+</script>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65">
+    <g id="prefix__ic_asset_matching" transform="translate(0 -.17)">
+        <g id="prefix__그룹_4052" data-name="그룹 4052" transform="translate(0 .17)">
+            <rect id="prefix__사각형_5369" width="65" height="65" fill="#bcc1cc" data-name="사각형 5369" opacity="0.13" rx="10"/>
+        </g>
+        <path id="prefix__제외_27" fill="#bcc1cc" d="M35.2 36.729a1.531 1.531 0 0 1-1.083-.448L27.6 29.767a16.836 16.836 0 1 1 2.167-2.167l6.512 6.512a1.531 1.531 0 0 1-1.079 2.617zM16.833 3.063a13.773 13.773 0 1 0 13.775 13.774A13.789 13.789 0 0 0 16.833 3.063zm7.143 20.914H9.689a7.149 7.149 0 0 1 7.144-7.139 4.593 4.593 0 1 1 4.592-4.594 4.6 4.6 0 0 1-4.592 4.594 7.15 7.15 0 0 1 7.143 7.137z" data-name="제외 27" transform="translate(14.351 14.127)"/>
+    </g>
+</svg>

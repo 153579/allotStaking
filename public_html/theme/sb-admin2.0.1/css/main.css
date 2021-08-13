@@ -1,0 +1,246 @@
+body {
+    background: #f2f3f8 !important;
+    overflow: hidden;
+}
+
+
+
+#cont_wrap{
+    background-color: #fff;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.03);
+}
+
+#cont{
+    width: 430px;
+    margin: 0 auto;
+}
+
+@media (max-width:414px){
+    #cont{
+        width: 334px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:375px){
+    #cont{
+        width: 295px;
+        margin: 0 auto;
+    }
+}
+
+
+#background_img_wrapper{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+#right_img{
+    width: 35.73%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#right_img > img{
+    width:100%;
+}
+
+#left_img{
+    width: 45.41%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#left_img > img{
+    width:100%;
+}
+
+#cont_wrap{
+    padding: 60px 40px;
+    margin: auto 0;
+    overflow: initial;
+}
+
+#cont_wrap_header{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8px;
+    font-size: 28px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: -1.4px;
+    color: #333a3d;
+    text-align: left
+}
+
+#cont_wrap_header > h3{
+
+}
+
+#cont_wrap_header1 > p{
+    margin: 0 0 40px 0;
+    padding: 0;
+    opacity: 0.77;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: -0.7px;
+    text-align: left;
+    color: #797e80;
+}
+
+@media(max-width:500px){
+    #cont_wrap_header1 > p{
+        font-size: 12px;
+    }
+}
+
+.input_group{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+#pw_no{
+    text-align: center;
+    margin: 50px auto 20px auto;
+    opacity: 0.71;
+    font-size: 13px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: -0.65px;
+    color: #797e80;
+}
+
+
+#bt1{
+    width: 100%;
+    height: 46px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background-color: #2a2c39;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: -0.7px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#cont_logo{
+    width: 90px;
+    margin: 0 auto;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.id_no{
+    text-align: center;
+    margin: 0;
+    padding-bottom: 45px;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+}
+
+.id_no > span{
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: -0.7px;
+    color: #797e80;
+}
+
+.id_no > a{
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: -0.7px;
+    text-align: left;
+    color: #0080f3;
+    text-decoration-line: underline;
+}
+
+.select_option{
+    cursor: pointer;
+    border-radius: 0px;
+    background-color: #efefef !important;
+    border: solid 1px #efefef;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: -0.65px;
+    text-align: left;
+    color: #797e80;
+}
+
+.same-form{
+    background: 0 0;
+    border: 2px solid #fff;
+    width: 23%;
+    height: 50px;
+    margin-top: 1.8rem;
+    padding-left: 1.5rem;
+}
+
+.form_control{
+    width: 100%;
+    height: 48px;
+    margin-top: 20px;
+    border: solid 1px #efefef;
+    border-radius: 0px;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: -0.65px;
+    text-align: left;
+    color: #333a3d;
+	padding-left:10px;
+}
+
+.form_control1{
+    width: 68%;
+    height: 45px;
+    margin-top: 27px;
+    border: solid 1px #efefef;
+    border-radius: 0px;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: -0.65px;
+    text-align: left;
+    color: #333a3d;
+	padding-left:10px;
+}
+
+.btn_1{
+    min-width: 23%;
+    height: 46px;
+    margin-left: 15px;
+    margin-top: 2.2rem;
+    border: 0;
+    background: #2a2c39;
+    color: #fff;
+}
+
+

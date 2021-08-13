@@ -1,0 +1,81 @@
+<!-- <?php
+if (in_array($_SERVER['REMOTE_ADDR'], array('218.235.233.131')) || $member['mb_id'] == "jp9811") 
+{
+    
+}else {
+    echo "<script> 
+        alert('준비중 입니다.');
+        location.href = 'https://dnbplus.com/';
+        </script>";
+}
+
+
+$sql = "select * from g5_cash where cash_del = 'N' and mb_id = '{$member['mb_id']}'";
+$cash = sql_query($sql);
+
+?> -->
+
+<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+
+    <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+        <div class="row">
+            <div class="col-xl-12">
+
+                <div class="kt-portlet">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">
+                                출금 현황 </h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <div class="kt-section">
+                            <div class="kt-section__content table-responsive">
+                                <table class="table table-striped table-scroll_m700">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>일시</th>
+                                            <th>출금 주소</th>
+                                            <th>메모(데스티네이션 값)</th>
+                                            <th>출금 신청 DNB</th>
+                                            <th>출금 신청 DNB 수수료</th>
+                                            <th>기준가(DNB/USDT)</th>
+                                            <th>출금DNB</th>
+                                            <th class="rico_center">상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+										<?php
+											$num = 0;
+											while($row = sql_fetch_array($cash)) {
+										?>
+                                        <tr>
+                                            <th><?php echo ++$num; ?></th>
+                                            <th><?php echo $row['cash_dttm']; ?></th>
+                                            <th><?php echo $row['cash_addr']; ?></th>
+                                            <th><?php echo $row['cash_memo']; ?></th>
+                                            <th><?php echo $row['out_money']; ?></th>
+                                            <th><?php echo $row['trans_money']; ?></th>
+                                            <th><?php echo $row['base_mir']; ?></th>
+                                            <th><?php echo $row['out_mir']; ?></th>
+                                            <th class="rico_center">
+												<?php if($row['cash_yn'] == 'Y') {?>
+                                                <span class="btn btn-bold btn-sm btn-font-sm  btn-label-success">승인</span>
+												<?php }else {?>
+												<span class="btn btn-bold btn-sm btn-font-sm  btn-label-fail">대기</span>
+												<?php }?>
+                                            </th>
+                                        </tr>
+										<?php
+											}
+										?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
